@@ -5,13 +5,26 @@
 
 $color-default-black:               #000000;
 $color-default-white:               #ffffff;
+$color-default-white-05:            rgba(255, 255, 255, 0.5);
 $color-transparent:                 rgba(255, 255, 255, 0);
 
 // Project palette
 // для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
 
+$color-navy-blue:                   #0266c1;
+$color-navy-blue-01:                rgba(2, 102, 193, 0.1);
 $color-neon-blue:                   #2c39f2;
+$color-resolution-blue:             #1C3374;
+$color-resolution-blue-05:          rgba(28, 51, 116, 0.5);
 $color-torch-red:                   #ff1553;
+$color-elephant:                    #2d383f;
+$color-elephant-06:                 rgba(45, 56, 63, 0.6);
+$color-elephant-03:                 rgba(45, 56, 63, 0.3);
+$color-elephant-02:                 rgba(45, 56, 63, 0.2);
+$color-nobel:                       #999999;
+$color-light-grey:                  #d3d3d3;
+$color-ocean:                       rgba(2, 102, 193, 0.10);
+
 
 // Gradient
 
@@ -27,7 +40,7 @@ $fz-default:                        16px;
 // https://www.artlebedev.ru/kovodstvo/sections/159/#13
 $ff-rouble:                         "Rouble", "Arial", sans-serif;
 
-$ff-placeholder:                    "Placeholder", "Arial", sans-serif;
+$ff-placeholder:                    "Montserrat", "Arial", sans-serif;
 
 // Animation
 // ---------------------------------
@@ -40,16 +53,18 @@ $trans-modal:                       0.6s cubic-bezier(0.55, 0, 0.1, 1);
 
 $trans-600:                         0.6s $tf-default;
 
+$trans-time-400:                    0.4s;
+
+$trans-time-600:                    0.6s;
+
 // Viewports
 // ---------------------------------
 
 $vp-320:                            320px;
-$vp-375:                            375px;
 $vp-768:                            768px;
-$vp-1024:                           1024px;
-$vp-1280:                           1280px;
+$vp-1200:                           1200px;
 $vp-1440:                           1440px;
-$vp-1920:                           1920px;
+
 
 // Retina
 // ---------------------------------

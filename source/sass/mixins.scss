@@ -36,13 +36,7 @@
   }
 }
 
-// Desktop first
-
-@mixin vp-1919 {
-  @media (max-width: ($vp-1920 - 1px)) {
-    @content;
-  }
-}
+/* Desktop first */
 
 @mixin vp-1439 {
   @media (max-width: ($vp-1440 - 1px)) {
@@ -50,14 +44,8 @@
   }
 }
 
-@mixin vp-1279 {
-  @media (max-width: ($vp-1280 - 1px)) {
-    @content;
-  }
-}
-
-@mixin vp-1023 {
-  @media (max-width: ($vp-1024 - 1px)) {
+@mixin vp-1199 {
+  @media (max-width: ($vp-1200 - 1px)) {
     @content;
   }
 }
@@ -68,51 +56,95 @@
   }
 }
 
-@mixin vp-374 {
-  @media (max-width: ($vp-375 - 1px)) {
+@mixin vp-319 {
+  @media (max-width: ($vp-320 - 1px)) {
     @content;
   }
 }
 
-// Mobile first
 
-// @mixin vp-375 {
-//   @media (min-width: $vp-375) {
-//     @content;
-//   }
-// }
+/* Montserrat --> Primary Font  (инфо из Style Guide) */
 
-// @mixin vp-768 {
-//   @media (min-width: $vp-768) {
-//     @content;
-//   }
-// }
 
-// @mixin vp-1024 {
-//   @media (min-width: $vp-1024) {
-//     @content;
-//   }
-// }
+@mixin primary-extrabold($font_size, $line_height) {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: $font_size;
+  line-height: $line_height;
+}
 
-// @mixin vp-1280 {
-//   @media (min-width: $vp-1280) {
-//     @content;
-//   }
-// }
+@mixin primary-bold($font_size, $line_height) {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: $font_size;
+  line-height: $line_height;
+}
 
-// @mixin vp-1440 {
-//   @media (min-width: $vp-1440) {
-//     @content;
-//   }
-// }
+@mixin primary-semibold($font_size, $line_height) {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: $font_size;
+  line-height: $line_height;
+}
 
-// @mixin vp-1920 {
-//   @media (min-width: $vp-1920) {
-//     @content;
-//   }
-// }
+@mixin primary-medium($font_size, $line_height) {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: $font_size;
+  line-height: $line_height;
+}
 
-// ---------------------------------
+@mixin primary-regular($font_size, $line_height) {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: $font_size;
+  line-height: $line_height;
+}
 
-// не нужно добавлять свои миксины для ресета списков, обнуления кнопок и прочие
-// этим вы усложняете работу команды, проверку вашего кода и будущую поддержку проекта
+@mixin primary-light($font_size, $line_height) {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: $font_size;
+  line-height: $line_height;
+}
+
+
+/* Анимация */
+
+@mixin slow_apperance($apperance_time) {
+  @keyframes fadeInFromNone {
+    0% {
+      opacity: 0;
+    }
+
+    1% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+  animation: fadeInFromNone $apperance_time ease-in-out;
+}
+
+@mixin from_none_apperance($apperance_time) {
+  @keyframes fadeInFromNone {
+    0% {
+      display: none;
+      opacity: 0;
+    }
+
+    1% {
+      display: flex;
+      opacity: 0;
+    }
+
+    100% {
+      display: flex;
+      opacity: 1;
+    }
+  }
+  animation: fadeInFromNone $apperance_time ease-in-out;
+}
+

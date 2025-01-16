@@ -1,0 +1,460 @@
+.hero {
+  position: relative;
+  color: $color-default-white;
+  z-index: 0;
+  overflow: hidden;
+
+  &.in-shadow {
+    &::before {
+      display: flex;
+      content: "";
+      position: absolute;
+      width: 100vw;
+      height: 100%;
+      background: $color-elephant-06;
+      z-index: 10;
+    }
+  }
+}
+
+.hero__slide-content {
+  min-height: 800px;
+  padding-top: 199px;
+  padding-bottom: 166px;
+  padding-right: 337px;
+  margin: 0 auto;
+  padding-left: min(80px, 25%);
+  z-index: 1;
+
+  @include vp-1199 {
+    min-height: 1024px;
+    padding: 212px 0 166px 0;
+  }
+
+  @include vp-767 {
+    min-height: 568px;
+    padding: 140px 15px 48px 15px;
+  }
+
+  h3 {
+    @include primary-extrabold(77px, 77px);
+    width: 944px;
+    margin: 0;
+    text-align: left;
+    margin-bottom: 24px;
+    pointer-events: none;
+
+    @include vp-1199 {
+      @include primary-extrabold(56px, 56px);
+      width: 100%;
+      text-align: center;
+      margin-bottom: 13px;
+    }
+
+    @include vp-767 {
+      @include primary-extrabold(26px, 26px);
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+
+  p {
+    @include primary-regular(17px, 24px);
+    width: 464px;
+    margin: 0;
+    text-align: left;
+    margin-bottom: 37px;
+    pointer-events: none;
+
+    @include vp-1199 {
+      max-width: 100%;
+      width: 63%;
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: 28px;
+    }
+
+    @include vp-767 {
+      @include primary-regular(15px, 20px);
+      width: calc(100vw - 44px);
+      margin: 0 auto;
+      margin-bottom: 60px;
+    }
+  }
+
+  span {
+    position: initial;
+
+    @include vp-767 {
+      position: relative;
+      left: -2px;
+    }
+  }
+
+  br {
+    display: none;
+
+    @include vp-1199 {
+      display: inline-block;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  a {
+    @include primary-medium(16px, 16px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    background-color: $color-navy-blue;
+    color: $color-default-white;
+    padding: 20px 20px 18px 20px;
+    border: 1px solid transparent;
+    transition: $trans-default;
+
+    @include vp-1199 {
+      padding: 20px 20px 18px 20px;
+    }
+
+    @include vp-767 {
+      padding: 20px 20px 18px 20px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible,
+    &:hover {
+      background-color: $color-default-white;
+      color: $color-resolution-blue;
+      border: 1px solid $color-resolution-blue;
+    }
+
+    &:active {
+      background-color: $color-resolution-blue;
+      color: $color-default-white;
+      border: 1px solid transparent;
+    }
+
+    &.disabled {
+      background-color: $color-nobel;
+      pointer-events: none;
+      border: 1px solid transparent;
+    }
+
+    @include vp-1199 {
+      margin: 0 auto;
+    }
+  }
+
+  ul {
+    position: absolute;
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    margin-right: auto;
+    flex-wrap: wrap;
+    list-style-type: none;
+    bottom: 80px;
+    pointer-events: none;
+
+    span {
+      @include primary-regular(12px, 16px);
+      display: flex;
+      padding: 14px 18px 12px 40px;
+      border: 1px solid $color-default-white-05;
+      flex-wrap: wrap;
+    }
+
+    @include vp-1199 {
+      display: none;
+    }
+  }
+
+  li {
+    position: relative;
+  }
+
+  svg {
+    position: absolute;
+    left: 20px;
+    top: 16px;
+  }
+}
+
+.hero__swiper-slide {
+  display: flex;
+  flex-direction: column;
+  min-height: 800px;
+  text-align: center;
+  background: $color-default-white;
+  justify-content: center;
+  align-items: center;
+
+  @include vp-1199 {
+    min-height: 1024px;
+  }
+
+  @include vp-767 {
+    min-height: 568px;
+    min-width: 320px;
+  }
+}
+
+.hero__swiper-slide img {
+  display: block;
+  margin: 0;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero__image-container {
+  display: grid;
+  height: 100%;
+  position: absolute;
+  justify-content: center;
+  align-self: center;
+}
+
+.hero__swiper-pagination {
+  width: 120px;
+  bottom: 91px;
+  right: calc(50% - 626.08px);
+
+  @include vp-1439 {
+    right: calc(50% - 100vw/2.3);
+  }
+
+  @include vp-1199 {
+    bottom: 34px;
+    right: calc(50% - 60px);
+  }
+}
+
+.hero__movie-container {
+  position: absolute;
+  display: flex;
+  width: 482px;
+  height: 317px;
+  bottom: 156px;
+  right: calc(50% - 600px);
+  border-width: 0;
+  outline-width: 0;
+  overflow: hidden;
+
+  @include vp-1439 {
+    right: calc(50% - 100vw/2.4);
+  }
+
+  @include vp-1199 {
+    width: 442px;
+    height: 300px;
+    bottom: 187px;
+    right: calc(50% - 221px);
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    opacity: 0.5;
+  }
+
+  iframe {
+    position: absolute;
+    width: 482px;
+    height: 317px;
+    border: none;
+    user-select: none;
+    z-index: 1;
+  }
+
+  img {
+    position: absolute;
+    width: 482px;
+    height: 317px;
+    z-index: 1;
+
+    @include vp-1199 {
+      width: 442px;
+      height: 300px;
+    }
+  }
+
+  button {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    top: calc(50% - 28px);
+    left: calc(50% - 28px);
+    border-radius: 50%;
+    border: 1px solid $color-default-white;
+    color: $color-default-white;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+    opacity: 1;
+    transition: $trans-default;
+
+    svg {
+      position: absolute;
+      top: 29%;
+      left: 42%;
+      pointer-events: none;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover,
+    &:focus-visible {
+      border: 1px solid $color-navy-blue;
+      color: $color-default-black;
+      opacity: 0.7;
+    }
+
+    &:active {
+      background: $color-resolution-blue;
+      border: none;
+      color: $color-default-white;
+      opacity: 0.7;
+    }
+
+    &:disabled {
+      pointer-events: none;
+      background: transparent;
+      border: 1px solid $color-navy-blue-01;
+      color: $color-default-white;
+
+      svg {
+        filter: invert(49%) sepia(70%) saturate(371%) hue-rotate(167deg) brightness(96%) contrast(99%);
+      }
+    }
+  }
+}
+
+.hero__photo-container {
+  position: absolute;
+  display: flex;
+  width: 410px;
+  height: 459px;
+  bottom: 156px;
+  right: calc(50% - 600px);
+  z-index: 1;
+  pointer-events: none;
+
+  @include vp-1439 {
+    right: calc(50% - 100vw/2.4);
+  }
+
+  @include vp-1199 {
+    width: 442px;
+    height: 365px;
+    bottom: 156px;
+    right: calc(50% - 221px);
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.hero__second-photo {
+  position: relative;
+  width: 308px;
+  height: 407px;
+  bottom: -2px;
+  right: -1px;
+  z-index: 0;
+  pointer-events: none;
+
+  @include vp-1199 {
+    width: 266px;
+    height: 351px;
+    bottom: -34px;
+    right: 0;
+  }
+}
+
+.hero__main-photo {
+  position: absolute;
+  width: 277px;
+  height: 366px;
+  top: 95px;
+  left: 134px;
+  z-index: 0;
+  pointer-events: none;
+
+  @include vp-1199 {
+    width: 236px;
+    height: 312px;
+    top: 87px;
+    left: 206px;
+  }
+}
+
+
+.hero__audio-container {
+  position: absolute;
+  display: flex;
+  width: 340px;
+  height: 220px;
+  bottom: 156px;
+  right: calc(50% - 600px);
+  border-width: 0;
+  outline-width: 0;
+  overflow: hidden;
+  overflow-y: clip;
+
+  @include vp-1439 {
+    right: calc(50% - 100vw/2.4);
+  }
+
+  @include vp-1199 {
+    width: 340px;
+    height: 220px;
+    bottom: 267px;
+    right: 0;
+    left: calc(50% - 170px);
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+
+  iframe {
+    position: absolute;
+    width: 340px;
+    height: 220px;
+    border: none;
+    background-color: transparent;
+    z-index: 0;
+  }
+}
+
+.hero__kavkaz-break {
+  display: none;
+
+  @include vp-1199 {
+    display: inline-block;
+  }
+}

@@ -95,9 +95,10 @@ export class Form {
       this._onFormSubmit(event, callback);
     });
 
-    form.addEventListener('input', (event) => {
-      this._onFormInput(event.target);
-    });
+    // Включаем этим комментом валидацию формы только после ее отправки (а не в процессе ввода).
+    // form.addEventListener('input', (event) => {
+    //   this._onFormInput(event.target);
+    // });
 
     form.addEventListener('reset', (event) => {
       this.reset(event.target);

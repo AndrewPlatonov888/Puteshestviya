@@ -1,0 +1,43 @@
+.social {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  max-width: 200px;
+  gap: 10px 15px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  color: $color-elephant;
+  border: 1px solid $color-elephant-03;
+  transition: $trans-default;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover,
+  &:focus-visible {
+    border: 1px solid $color-elephant;
+  }
+
+  &:active {
+    color: $color-default-white;
+    background-color: $color-navy-blue;
+    border: 0;
+  }
+
+  &--disabled {
+    pointer-events: none;
+    border: 1px solid $color-elephant-03;
+    color: $color-elephant-03;
+  }
+}
